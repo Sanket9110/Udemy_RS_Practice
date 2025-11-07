@@ -11,6 +11,3 @@ export default defineConfig({
 
 });
 
-test ()
-Test2()
-test3()
