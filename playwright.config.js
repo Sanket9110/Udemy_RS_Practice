@@ -1,13 +1,22 @@
-import { defineConfig, devices } from '@playwright/test';
+import { chromium, defineConfig, devices } from '@playwright/test';
 
 
 
-export default defineConfig({
+const config = ({
   testDir: './tests',
   timeout: 40 * 1000,
-  use: {
+  expect: {
+    timeout: 40 * 1000
+  },
+  reporter: 'html',
 
+  use: {
+    browserName: 'chromium',
+    channel: 'chrome',
+    headless: false,
   },
 
 });
+
+module.exports = config
 
